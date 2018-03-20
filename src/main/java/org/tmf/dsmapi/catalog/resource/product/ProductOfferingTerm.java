@@ -35,20 +35,32 @@ public class ProductOfferingTerm implements Serializable {
     @Column(name = "OFFERING_TERM_DESCRIPTION", nullable = true)
     private String description;
 
+    @Column(name = "IS_CUSTOM", nullable = true)
+    private Boolean is_custom;
+
+    @Column(name = "EXCLUSIVITY", nullable = true)
+    private String exclusivity;
+
+    @Column(name = "REGION", nullable = true)
+    private String region;
+
+    @Column(name = "PURPOSE", nullable = true)
+    private String purpose;
+
+    @Column(name = "SECTOR", nullable = true)
+    private String sector;
+
     @Column(name = "OFFERING_TERM_DURATION", nullable = true)
     private String duration;
-
-    @Column(name = "TEST", nullable = true)
-    private String test;
-
-    @Column(name = "TEST2", nullable = true)
-    private String test2;
 
     @AttributeOverrides({
         @AttributeOverride(name = "startDateTime", column = @Column(name = "OFFERING_TERM_START_DATE_TIME")),
         @AttributeOverride(name = "endDateTime", column = @Column(name = "OFFERING_TERM_END_DATE_TIME"))
     })
     private TimeRange validFor;
+
+    @Column(name = "TRANSFERABILITY", nullable = true)
+    private String transferability;
 
     public ProductOfferingTerm() {
     }
