@@ -41,6 +41,9 @@ public class ProductOfferingTerm implements Serializable {
     @Column(name = "TEST", nullable = true)
     private String test;
 
+    @Column(name = "TEST2", nullable = true)
+    private String test2;
+
     @AttributeOverrides({
         @AttributeOverride(name = "startDateTime", column = @Column(name = "OFFERING_TERM_START_DATE_TIME")),
         @AttributeOverride(name = "endDateTime", column = @Column(name = "OFFERING_TERM_END_DATE_TIME"))
