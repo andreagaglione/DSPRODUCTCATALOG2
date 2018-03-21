@@ -53,6 +53,9 @@ public class ProductOfferingTerm implements Serializable {
     @Column(name = "SECTOR", nullable = true)
     private String sector;
 
+    @Column(name = "TRANSFERABILITY", nullable = true)
+    private String transferability;
+
     @Column(name = "OFFERING_TERM_DURATION", nullable = true)
     private String duration;
 
@@ -61,9 +64,6 @@ public class ProductOfferingTerm implements Serializable {
         @AttributeOverride(name = "endDateTime", column = @Column(name = "OFFERING_TERM_END_DATE_TIME"))
     })
     private TimeRange validFor;
-
-    @Column(name = "TRANSFERABILITY", nullable = true)
-    private String transferability;
 
     public ProductOfferingTerm() {
     }
